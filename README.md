@@ -1,16 +1,24 @@
-# redhab
+# RedHab 📚
 
-A new Flutter project.
+**RedHab** es una aplicación móvil hecha con Flutter que permite intercambiar conocimientos y aprender nuevas habilidades en comunidad.
 
-## Getting Started
+## 🔧 Requisitos
 
-This project is a starting point for a Flutter application.
+- [Flutter SDK](https://flutter.dev/docs/get-started/install) (versión 3.x en adelante recomendada)
+- VS Code, instalar la extensión de Flutter
+- Dispositivo Android o emulador configurado
+- Git instalado
 
-A few resources to get you started if this is your first Flutter project:
+## 📦 Instalación
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. **Clona este repositorio:**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone https://github.com/Cossiovd/RedHab.git
+cd redhab
+
+2. **Instala las dependencias:**
+flutter pub get
+
+3. **Corre la aplicación**
+flutter run
