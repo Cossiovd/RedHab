@@ -30,7 +30,7 @@ git clone https://github.com/Cossiovd/RedHab.git
 2️⃣ **Navegar al directorio del proyecto**:
 
 ```bash
-cd RedHab
+cd redhab
 ```
 
 3️⃣ **Instalar dependencias:**
@@ -43,8 +43,9 @@ flutter pub get
 
 ```bash
 flutter run
-⚠️ Asegúrate de tener un emulador configurado o un dispositivo Android conectado.
 ```
+⚠️ Asegúrate de tener un emulador configurado o un dispositivo Android conectado.
+
 
 🛠️ Funcionalidades Clave
 ✅ Pantalla de bienvenida interactiva
@@ -54,7 +55,10 @@ flutter run
 
 🧪 Testing
 Puedes ejecutar los tests existentes con:
+
+```bash
 flutter test
+```
 
 📜 Licencia
 Este proyecto es de código abierto y se encuentra bajo la licencia MIT.
