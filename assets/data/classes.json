@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Clase de Inglés",
+    "teacher": "Juan Pérez",
+    "schedule": "Lunes 6pm",
+    "image": "assets/images/imagenclass.png",
+    "location": "Calle 123",
+    "price": "$30",
+    "participants": "15",
+    "description": "Aprende inglés básico...",
+    "learnings": ["Gramática", "Conversación", "Pronunciación"]
+  },
+  {
+    "title": "Clase de Piano",
+    "teacher": "Ana Gómez",
+    "schedule": "Martes 5pm",
+    "image": "assets/images/imagenclass.png",
+    "location": "Calle 456",
+    "price": "$40",
+    "participants": "10",
+    "description": "Clases para principiantes...",
+    "learnings": ["Técnica", "Lectura musical", "Improvisación"]
+  },
+  {
+    "title": "Clase fron",
+    "teacher": "Ana Gómez",
+    "schedule": "Martes 5pm",
+    "image": "assets/images/imagenclass.png",
+    "location": "Calle 456",
+    "price": "$40",
+    "participants": "10",
+    "description": "Clases para principiantes...",
+    "learnings": ["Técnica", "Lectura musical", "Improvisación"]
+  }
+]
