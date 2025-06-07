@@ -66,6 +66,16 @@ class _HomePageState extends State<HomePage> {
                   label: Text("Todos"),
                   selected: true,
                   onSelected: (_) {},
+                  showCheckmark: false, 
+                  selectedColor: Colors.blueAccent,       // cuando está seleccionado
+                  backgroundColor: Colors.grey.shade200,  // cuando no está seleccionado
+                  labelStyle: TextStyle(color: Colors.white), // color del texto
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                    side: BorderSide(
+                      color: Colors.blue, // Borde del chip
+                    ),
+                  ),
                 ),
                 SizedBox(width: 8),
                 FilterChip(

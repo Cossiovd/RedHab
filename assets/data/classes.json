@@ -1,35 +1,59 @@
 [
   {
-    "title": "Clase de Inglés",
+    "category": "Tecnología",
+    "image": "assets/images/programacion.png",
+    "title": "Clase de Programación",
     "teacher": "Juan Pérez",
-    "schedule": "Lunes 6pm",
-    "image": "assets/images/imagenclass.png",
-    "location": "Calle 123",
-    "price": "$30",
-    "participants": "15",
-    "description": "Aprende inglés básico...",
-    "learnings": ["Gramática", "Conversación", "Pronunciación"]
+    "schedule": "Sábados, 10:00 AM",
+    "location": "Teams",
+    "price": "Gratuito",
+    "participants": 8,
+    "capacity": 12,
+    "description": "Aprende programación desde cero.",
+    "learnings": [
+      "Variables",
+      "Condicionales",
+      "Bucles",
+      "Funciones"
+    ]
   },
+
   {
-    "title": "Clase de Piano",
-    "teacher": "Ana Gómez",
-    "schedule": "Martes 5pm",
-    "image": "assets/images/imagenclass.png",
-    "location": "Calle 456",
-    "price": "$40",
-    "participants": "10",
-    "description": "Clases para principiantes...",
-    "learnings": ["Técnica", "Lectura musical", "Improvisación"]
+    "category": "Música",
+    "image": "assets/images/musica.jpeg",
+    "title": "Guitarra para Principiantes",
+    "teacher": "Ana Torres",
+    "schedule": "Martes, 6:00 PM",
+    "location": "Zoom",
+    "price": "Gratuito",
+    "participants": 5,
+    "capacity": 10,
+    "description": "Aprende a tocar la guitarra desde cero, sin necesidad de experiencia previa.",
+    "learnings": [
+      "Afinación de la guitarra",
+      "Acordes básicos",
+      "Ritmos simples",
+      "Tocar tu primera canción"
+    ]
   },
+
   {
-    "title": "Clase fron",
-    "teacher": "Ana Gómez",
-    "schedule": "Martes 5pm",
-    "image": "assets/images/imagenclass.png",
-    "location": "Calle 456",
-    "price": "$40",
-    "participants": "10",
-    "description": "Clases para principiantes...",
-    "learnings": ["Técnica", "Lectura musical", "Improvisación"]
+    "category": "Idiomas",
+    "image": "assets/images/idiomas.jpeg",
+    "title": "Inglés Conversacional Básico",
+    "teacher": "Luis Herrera",
+    "schedule": "Miércoles y Viernes, 5:00 PM",
+    "location": "Google Meet",
+    "price": "Gratuito",
+    "participants": 10,
+    "capacity": 15,
+    "description": "Mejora tu fluidez en inglés a través de ejercicios prácticos y conversación guiada.",
+    "learnings": [
+      "Saludos y presentaciones",
+      "Frases comunes",
+      "Conversaciones cotidianas",
+      "Vocabulario básico"
+    ]
   }
+  
 ]

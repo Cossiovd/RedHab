@@ -53,7 +53,9 @@ dev_dependencies:
 flutter:
   assets:
   - assets/images/welcome.png
-  - assets/images/imagenclass.png
+  - assets/images/programacion.png
+  - assets/images/musica.jpeg
+  - assets/images/idiomas.jpeg
   - assets/images/avatar.png
   - assets/data/classes.json
 
