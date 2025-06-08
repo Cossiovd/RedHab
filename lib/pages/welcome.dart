@@ -48,7 +48,7 @@ class WelcomePage extends StatelessWidget {
               const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/login');
+                  Navigator.pushNamed(context, '/createclass');
                 },
                 child: const Text('Comenzar'),
                 style: ElevatedButton.styleFrom(
