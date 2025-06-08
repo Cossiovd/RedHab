@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  path_provider: ^2.0.14
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -57,7 +58,10 @@ flutter:
   - assets/images/musica.jpeg
   - assets/images/idiomas.jpeg
   - assets/images/avatar.png
+  - assets/images/icon.png
+  - assets/images/registericon.png
   - assets/data/classes.json
+  - assets/data/users.json
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Juan",
+    "lastName": "Martinez",
+    "age": "20",
+    "gender": "M",
+    "email": "user1@hotmail.com",
+    "password": "123456",
+    "userType": "student"
+  },
+
+  {
+    "name": "Juanita",
+    "lastname": "Valencia",
+    "age": "25",
+    "gender": "F",
+    "email": "user2@hotmail.com",
+    "password": "123456",
+    "userType": "teacher"
+  }
+]

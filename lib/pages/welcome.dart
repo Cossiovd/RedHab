@@ -11,7 +11,11 @@ class WelcomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.menu_book, size: 80, color: Colors.blue),
+              const CircleAvatar(
+                radius: 40,
+                backgroundColor: Colors.blue,
+                backgroundImage: AssetImage('assets/images/icon.png'),
+              ),
               const SizedBox(height: 16),
               const Text(
                 'RedHab',
@@ -44,7 +48,7 @@ class WelcomePage extends StatelessWidget {
               const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/home');
+                  Navigator.pushNamed(context, '/login');
                 },
                 child: const Text('Comenzar'),
                 style: ElevatedButton.styleFrom(

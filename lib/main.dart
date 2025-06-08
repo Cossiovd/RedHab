@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         '/welcome': (context) => WelcomePage(),
         '/login': (context) => LoginPage(),
         '/register': (context) => RegisterPage(),
-        '/home': (context) => HomePage(),
+        //'/home': (context) => HomePage(),
         '/profilestudent': (context) => ProfileStudentPage(),
         '/profileteacher': (context) => ProfileTeacherPage(),
         '/createclass': (context) => CreateClassPage(),
@@ -35,6 +35,11 @@ class MyApp extends StatelessWidget {
           return MaterialPageRoute(
             builder: (context) => ClassDetailPage(classItem: classItem),
           );
+        } else if(settings.name == '/home'){
+          final email = settings.arguments as String;
+          return MaterialPageRoute(
+            builder: (context) => HomePage(email: email),
+            );
         }
         return null;
       },
