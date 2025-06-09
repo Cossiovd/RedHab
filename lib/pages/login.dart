@@ -33,12 +33,27 @@ class _LoginPageState extends State<LoginPage> {
       );
 
       // Si encontró, navegar y reemplazar pantalla
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (_) => HomePage(email: matchedUser['email']),
-        ),
-      );
+      if (matchedUser['userType'] == 'teacher') {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (_) => HomePage(
+              email: matchedUser['email'],
+              userType: 'teacher', // Pasa el tipo de usuario
+            ),
+          ),
+        );
+      } else {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (_) => HomePage(
+              email: matchedUser['email'],
+              userType: 'student', // Pasa el tipo de usuario
+            ),
+          ),
+        );
+      }
     } catch (e) {
       // Si no encontró o hubo error, mostrar mensaje
       ScaffoldMessenger.of(context).showSnackBar(
@@ -67,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 32),
           child: Form(
-            key: _formKey,  // Asignamos la key aquí
+            key: _formKey, // Asignamos la key aquí
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -99,7 +114,9 @@ class _LoginPageState extends State<LoginPage> {
                       return 'Por favor ingresa tu correo electrónico';
                     }
                     // Validación simple de formato email
-                    if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value.trim())) {
+                    if (!RegExp(
+                      r'^[^@]+@[^@]+\.[^@]+',
+                    ).hasMatch(value.trim())) {
                       return 'Correo electrónico inválido';
                     }
                     return null;
@@ -139,7 +156,10 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
-                    child: const Text("Iniciar sesión", style: TextStyle(color: Colors.white)),
+                    child: const Text(
+                      "Iniciar sesión",
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 12),
@@ -148,8 +168,11 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     Navigator.pushNamed(context, '/register');
                   },
-                  child: const Text("Crear cuenta", style: TextStyle(color: Colors.blue)),
-                )
+                  child: const Text(
+                    "Crear cuenta",
+                    style: TextStyle(color: Colors.blue),
+                  ),
+                ),
               ],
             ),
           ),

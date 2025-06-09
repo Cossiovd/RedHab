@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 
 class ProfileTeacherPage extends StatelessWidget {
+  
+  
+  final String email;
+  final String userType;
+  
   final List<Map<String, String>> clases = List.generate(5, (index) => {
         "titulo": "Introducción a la programación Web",
         "hora": "Lunes, 4:00 pm",
         "inscritos": "36 Inscritos",
       });
+
+  ProfileTeacherPage({super.key, required this.email, required this.userType});
 
   @override
   Widget build(BuildContext context) {

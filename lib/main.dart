@@ -24,24 +24,47 @@ class MyApp extends StatelessWidget {
         '/welcome': (context) => WelcomePage(),
         '/login': (context) => LoginPage(),
         '/register': (context) => RegisterPage(),
-        //'/home': (context) => HomePage(),
-        '/profilestudent': (context) => ProfileStudentPage(),
-        '/profileteacher': (context) => ProfileTeacherPage(),
         '/createclass': (context) => CreateClassPage(),
       },
       onGenerateRoute: (settings) {
-        if (settings.name == '/classDetail') {
-          final classItem = settings.arguments as ClassItem;
-          return MaterialPageRoute(
-            builder: (context) => ClassDetailPage(classItem: classItem),
-          );
-        } else if(settings.name == '/home'){
-          final email = settings.arguments as String;
-          return MaterialPageRoute(
-            builder: (context) => HomePage(email: email),
+        // Manejo de rutas con parámetros
+        switch (settings.name) {
+          case '/home':
+            final args = settings.arguments as Map<String, dynamic>;
+            return MaterialPageRoute(
+              builder: (context) => HomePage(
+                email: args['email'],
+                userType: args['userType'],
+              ),
             );
+            
+          case '/profilestudent':
+            final args = settings.arguments as Map<String, dynamic>;
+            return MaterialPageRoute(
+              builder: (context) => ProfileStudentPage(
+                email: args['email'],
+                userType: args['userType'], userData: {},
+              ),
+            );
+            
+          case '/profileteacher':
+            final args = settings.arguments as Map<String, dynamic>;
+            return MaterialPageRoute(
+              builder: (context) => ProfileTeacherPage(
+                email: args['email'],
+                userType: args['userType'],
+              ),
+            );
+            
+          case '/classDetail':
+            final classItem = settings.arguments as ClassItem;
+            return MaterialPageRoute(
+              builder: (context) => ClassDetailPage(classItem: classItem),
+            );
+            
+          default:
+            return null;
         }
-        return null;
       },
     );
   }

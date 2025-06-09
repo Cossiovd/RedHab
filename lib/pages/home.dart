@@ -1,15 +1,16 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:redhab/pages/menu.dart';
 import '../widgets/ClassCard.dart';
 import '../widgets/classitem.dart';
 
-
 class HomePage extends StatefulWidget {
   final String email;
+  final String userType;
 
-  HomePage({required this.email});
-  
+  const HomePage({super.key, required this.email, required this.userType});
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -73,14 +74,63 @@ class _HomePageState extends State<HomePage> {
             // Implementar búsqueda en el futuro
           },
         ),
-        const Padding(
-          padding: EdgeInsets.only(right: 12.0),
-          child: CircleAvatar(
-            backgroundImage: AssetImage('assets/images/avatar.png'),
-            radius: 18,
-          ),
+        CustomMenu(
+          email: widget.email,
+          userType: widget.userType,
+          avatarPath: widget.userType == 'teacher'
+              ? 'assets/images/avatar.png'
+              : 'assets/images/avatar.png',
+          onSelected: (value) {
+            // Manejar las opciones del menú
+            switch (value) {
+              case 'profile':
+                Navigator.pushReplacementNamed(
+                  context,
+                  widget.userType == 'teacher'
+                      ? '/profileteacher'
+                      : '/profilestudent',
+                  arguments: {'email': widget.email, 'userType': widget.userType},
+                );
+                break;
+              case 'settings':
+                Navigator.pushNamed(context, '/settings');
+                break;
+              case 'logout':
+                _showLogoutDialog(context);
+                break;
+            }
+          },
         ),
       ],
+    );
+  }
+
+  // Función para mostrar diálogo de logout
+  void _showLogoutDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Cerrar sesión'),
+          content: const Text('¿Estás seguro que deseas cerrar sesión?'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Cancelar'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+                Navigator.pushReplacementNamed(context, '/login');
+              },
+              child: const Text(
+                'Cerrar sesión',
+                style: TextStyle(color: Colors.red),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 
@@ -141,11 +191,7 @@ class _HomePageState extends State<HomePage> {
                 schedule: item.schedule,
                 imagePath: item.image,
                 onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    '/classDetail',
-                    arguments: item,
-                  );
+                  Navigator.pushNamed(context, '/classDetail', arguments: item);
                 },
               );
             },

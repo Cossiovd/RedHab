@@ -82,7 +82,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (_) => HomePage(email: email)),
+      MaterialPageRoute(builder: (_) => HomePage(email: email, userType: '',)),
     );
   }
 
